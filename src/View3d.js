@@ -1,7 +1,6 @@
 import { Canvas } from '@react-three/fiber'
 import * as THREE from 'three';
 import { OrbitControls, Center } from '@react-three/drei';
-import { useControls } from 'leva';
 
 
 //import { Stack } from './Stack';
