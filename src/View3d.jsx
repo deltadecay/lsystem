@@ -1,6 +1,6 @@
 import { Canvas } from '@react-three/fiber'
-import * as THREE from 'three';
-import { OrbitControls, Center } from '@react-three/drei';
+import { DoubleSide } from 'three'
+import { OrbitControls, Center } from '@react-three/drei'
 
 
 
@@ -62,7 +62,7 @@ function BranchLeaves({length, radius, accScaleDown}) {
                     itemSize={3}
                 /> 
             </bufferGeometry>
-            <meshStandardMaterial color={'#2c854a'} side={THREE.DoubleSide} />
+            <meshStandardMaterial color={'#2c854a'} side={DoubleSide} />
         </mesh>
     );
 }
@@ -164,7 +164,7 @@ export function View3d() {
 
                     <mesh receiveShadow rotation={[90 * Math.PI / 180.0, 0, 0]}>
                         <planeGeometry args={[10,10]} />
-                        <meshStandardMaterial color={'#d7a97b'} side={THREE.DoubleSide} />
+                        <meshStandardMaterial color={'#d7a97b'} side={DoubleSide} />
 
                     </mesh>
 
