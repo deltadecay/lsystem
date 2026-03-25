@@ -50,13 +50,13 @@ function BranchLeaves({length, radius, accScaleDown}) {
         <mesh castShadow>
             <bufferGeometry>
                 <bufferAttribute
-                    attachObject={["attributes", "position"]}
+                    attach='attributes-position'
                     count={vertices.length / 3}
                     array={new Float32Array(vertices)}
                     itemSize={3}
                 />
                 <bufferAttribute
-                    attachObject={["attributes", "normal"]}
+                    attach='attributes-normal'
                     count={normals.length / 3}
                     array={new Float32Array(normals)}
                     itemSize={3}
