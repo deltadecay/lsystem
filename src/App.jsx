@@ -1,18 +1,15 @@
-import { useState } from 'react'
-import { View3d } from './View3d';
-import './App.css';
+import { useState } from "react";
+import { View3d } from "./View3d";
+import "./App.css";
 
 function App() {
-
-
-
-  return (
-    <div className="App">
-      <main>
-        <View3d />
-      </main>
-    </div>
-  );
+	return (
+		<div className="App">
+			<main>
+				<View3d />
+			</main>
+		</div>
+	);
 }
 
 export default App;
