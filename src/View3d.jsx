@@ -1,6 +1,8 @@
+//import { useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import { DoubleSide } from "three";
 import { OrbitControls, Center } from "@react-three/drei";
+//import { useEffect, useMemo } from "react";
 
 function BranchLeaves({ length, radius, accScaleDown }) {
 	const startOffset = 0.2;
@@ -9,10 +11,32 @@ function BranchLeaves({ length, radius, accScaleDown }) {
 	const leafLength = 0.15 / accScaleDown;
 	const leafWidth = 0.1 / accScaleDown;
 	const numLeaves = 20;
+
+	/*
+	const [angles, setAngles] = useState(
+		//Array.from({ length: numLeaves }, () => 0),
+		Array(numLeaves).fill(0),
+	);
+
+	useEffect(() => {
+		const rngAngles = Array.from({ length: numLeaves }, (_, i) => {
+			//const t = i / (numLeaves - 1);
+			const ang = ((360 * Math.PI) / 180.0) * Math.random(); //t*360.0 * Math.PI / 180.0;
+			return ang;
+		});
+		console.log({ rngAngles });
+		setAngles(rngAngles);
+		return () => {
+			setAngles(Array(numLeaves).fill(0));
+		};
+	}, [setAngles, numLeaves, length, radius, accScaleDown]);
+	*/
+
 	let vertices = [];
 	let normals = [];
 	for (let i = 0; i < numLeaves; i++) {
 		const t = i / (numLeaves - 1);
+		//const ang = angles[i];
 		const ang = ((360 * Math.PI) / 180.0) * Math.random(); //t*360.0 * Math.PI / 180.0;
 		const h = length * (startOffset + t * (endOffset - startOffset));
 
